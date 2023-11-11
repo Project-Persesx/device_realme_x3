@@ -119,6 +119,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init/realmeparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/realmeparts.rc
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
