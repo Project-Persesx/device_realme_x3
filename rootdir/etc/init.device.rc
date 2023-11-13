@@ -222,3 +222,6 @@ service boot_dmesg /system/bin/sh -c "dmesg -w > /cache/boot_dmesg.txt"
 on property:sys.boot_completed=1
     stop boot_lc_main
     stop boot_dmesg
+
+on boot && property:persist.sys.usb.config=*
+    setprop sys.usb.config ${persist.sys.usb.config}
